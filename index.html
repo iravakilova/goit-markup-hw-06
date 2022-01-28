@@ -356,15 +356,20 @@
             </div>
             <form class="mailing-form">
                 <p class="footer-welcome">Подпишитесь на рассылку</p>
-                <label for="mail"></label>
-                <input type="email" name="mail" id="mail" placeholder="E-mail" class="mailing-input">
-                <button type="submit" class="mailing-button">Подписаться</button>
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="E-mail" class="mailing-input">
+                <button type="submit" class="mailing-button">Подписаться
+                    <svg class="mailing-send">
+                        <use href="./images/icons.svg#icon-send"></use>
+                    </svg>
+                </button>
             </form>
         </div>
     </footer>
-<!-- is-hidden -->
 
-    <div class="backdrop" data-modal>
+    <!-- Modal window -->
+
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <form class="modal-inner">
                 <button data-modal-close class="modal-button-close">
@@ -375,16 +380,28 @@
                 <p class="modal-welcome">Оставьте свои данные, мы вам перезвоним</p>
                 <div class="modal-data">
                     <div class="modal-item">
-                        <label for="username" class="modal-label">Имя</label>
-                        <input type="text" name="username" id="username" class="modal-input">
+                        <label for="username" class="modal-label">Имя
+                            <input type="text" name="username" id="username" class="modal-input">
+                            <svg class="modal-icon">
+                                <use href="./images/icons.svg#icon-person"></use>
+                            </svg>
+                        </label>
                     </div>
                     <div class="modal-item">
-                        <label for="number" class="modal-label">Телефон</label>
-                        <input type="tel" name="number" id="number" class="modal-input">
+                        <label for="number" class="modal-label">Телефон
+                            <input type="tel" name="number" id="number" class="modal-input">
+                            <svg class="modal-icon">
+                                <use href="./images/icons.svg#icon-phone"></use>
+                            </svg>
+                        </label>
                     </div>
                     <div class="modal-item">
-                        <label for="mail" class="modal-label">Почта</label>
-                        <input type="email" name="mail" id="mail" class="modal-input">
+                        <label for="mail" class="modal-label">Почта
+                            <input type="email" name="mail" id="mail" class="modal-input">
+                            <svg class="modal-icon">
+                                <use href="./images/icons.svg#icon-email"></use>
+                            </svg>
+                        </label>
                     </div>
                     <div class="modal-item">
                         <label for="comment" class="modal-label">Комментарий</label>
@@ -392,8 +409,10 @@
                     </div>
                 </div>
                 <label class="modal-checkbox">
-                    <input type="checkbox" name="agree" value="agree">Соглашаюсь с рассылкой и принимаю <a href="#" download>Условия договора</a>
-                    <span class="checkbox-icon"></span> 
+                    <svg class="checkbox-icon">
+                        <use href="./images/icons.svg#icon-check"></use>
+                    </svg>
+                    <input class= "checkbox-input" type="checkbox" name="agree" value="agree">Соглашаюсь с рассылкой и принимаю <a href="#" download>Условия договора</a>
                 </label>
                 <button type="submit" class="modal-button">Отправить</button>
             </form>
