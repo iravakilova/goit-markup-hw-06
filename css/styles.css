@@ -649,6 +649,10 @@ footer {
   position: absolute;
   top: 8px;
   right: 8px;
+  outline: none;
+  transition-property: fill;
+  transition-duration: var(--transition-duration-primary);
+  transition-timing-function: var(--transition-timing-function-primary);
 }
 .modal-button-close-icon {
   width: 11px;
@@ -657,6 +661,10 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.modal-button-close:hover,
+.modal-button-close:focus {
+  fill: var(--accent-color);
 }
 .modal-inner {
   padding: 40px;
@@ -714,7 +722,7 @@ footer {
 }
 .modal-textarea {
   min-height: 120px;
-  resize: vertical;
+  resize: none;
   padding: 16px 12px;
 }
 .modal-input:focus {
@@ -723,7 +731,6 @@ footer {
 .modal-input:focus ~ .modal-icon {
   fill: var(--accent-color);
 }
-
 .modal-checkbox {
   font-size: var(--font-size-primary);
   line-height: calc(24 / 14);
@@ -731,6 +738,7 @@ footer {
   color: var(--color-text-secondary);
   display: flex;
   align-items: center;
+  margin-left: 12px;
 }
 .modal-checkbox a {
   color: var(--accent-color);
